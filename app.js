@@ -9,6 +9,7 @@ import db from './database/db.js';
 // const UserRoute = require('./routes/UserRoute.js');
 import UserRoute from './routes/UserRoute.js';
 import MessageRoute from './routes/MessegeRoute.js';
+import GroupRoute from './routes/GroupRoute.js';
 
 const app = express();
 app.use(cors({
@@ -100,6 +101,7 @@ app.get('/', (req, res) => {
 
 app.use('/user', UserRoute);
 app.use('/messages', MessageRoute)
+app.use('/group', GroupRoute);
 
 server.listen(8080, () => {  // Change app.listen to server.listen
     // // console.log('Server is running on port 8080');
